@@ -34,6 +34,7 @@ public class IndexController {
 	@RequestMapping(value="", method=RequestMethod.GET)
     public ModelAndView index() {
         ModelAndView model = new ModelAndView("index");
+		System.out.println("Enter to the controller");
         model.addObject("list", userService.listAllUsers());
         return model;
     }
